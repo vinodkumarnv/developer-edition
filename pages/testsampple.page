@@ -1,0 +1,9 @@
+<apex:page >
+    <html>
+        <head></head>
+        <body>
+            <p>Hi this is my page.</p>
+        </body>
+    </html>
+
+</apex:page>

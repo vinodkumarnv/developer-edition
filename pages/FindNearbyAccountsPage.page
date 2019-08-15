@@ -1,0 +1,143 @@
+<apex:page sidebar="false" showheader="false" standardController="Account" recordSetVar="accts" extensions="FindNearby">
+    
+    <!-- Include in Google's Maps API via JavaScript static resource -->
+    <apex:includeScript value="{!$Resource.googleMapsAPI}" /> 
+    
+    <!-- Set this API key to fix JavaScript errors in production -->
+    <!--http://salesforcesolutions.blogspot.com/2013/01/integration-of-salesforcecom-and-google.html-->
+    <script type="text/javascript" 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCROH4OR9fzDhmprWPL1wGWfPT4uGUeMWg&sensor=false"> 
+        </script>
+        
+    <!-- Setup the map to take up the whole window --> 
+    <style>
+        html, body { height: 100%; }
+        .page-map, .ui-content, #map-canvas { width: 100%; height:100%; padding: 0; }
+        #map-canvas { height: min-height: 100%; }
+    </style>
+    
+    <script>
+        function initialize() {
+            var lat, lon;
+              
+             // If we can, get the position of the user via device geolocation
+             if (navigator.geolocation) {
+                 navigator.geolocation.getCurrentPosition(function(position){
+                     lat = position.coords.latitude;
+                     lon = position.coords.longitude;                    
+                     
+                     // Use Visualforce JavaScript Remoting to query for nearby accts      
+                     Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.FindNearby.getNearby}', lat, lon,
+                         function(result, event){
+                             if (event.status) {
+                                 console.log(result);
+                                 createMap(lat, lon, result);           
+                             } else if (event.type === 'exception') {
+                                 //exception case code          
+                             } else {
+                                            
+                             }
+                          }, 
+                          {escape: true}
+                      );
+                  });
+              } else {
+                  // Set default values for map if the device doesn't have geolocation capabilities
+                    /** Eindhoven **/
+                    lat = 51.096214;
+                    lon = 3.683153;
+                    
+                    var result = [];
+                    createMap(lat, lon, result);
+              }
+          
+         }
+    
+         function createMap(lat, lon, accts){
+            // Get the map div, and center the map at the proper geolocation
+            var currentPosition = new google.maps.LatLng(lat,lon);
+            var mapDiv = document.getElementById('map-canvas');
+            var map = new google.maps.Map(mapDiv, {
+                center: currentPosition, 
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            
+            // Set a marker for the current location
+            var positionMarker = new google.maps.Marker({
+                map: map,
+                position: currentPosition,
+                icon: 'http://maps.google.com/mapfiles/ms/micons/green.png'
+            });
+            
+                        
+            // Keep track of the map boundary that holds all markers
+            var mapBoundary = new google.maps.LatLngBounds();
+            mapBoundary.extend(currentPosition);
+            
+            // Set markers on the map from the @RemoteAction results
+            var acct;
+            for(var i=0; i<accts.length;i++){
+                acct = accts[i];
+                console.log(accts[i]);
+                setupMarker();
+            }
+            
+            // Resize map to neatly fit all of the markers
+            map.fitBounds(mapBoundary);
+
+           function setupMarker(){ 
+                var acctNavUrl;
+                
+                // Determine if we are in Salesforce1 and set navigation link appropriately
+                try{
+                    if(sforce.one){
+                        acctNavUrl = 
+                            'javascript:sforce.one.navigateToSObject(\'' + acct.Id + '\')';
+                    }
+                } catch(err) {
+                    console.log(err);
+                    acctNavUrl = '\\' + acct.Id;
+                }
+                
+                var acctDetails = 
+                    '<a href="' + acctNavUrl + '">' + 
+                    acct.Name + '</a><br/>' + 
+                    acct.BillingStreet + '<br/>' + 
+                    acct.BillingCity + '<br/>' + 
+                    acct.Phone;
+               
+               // Create the callout that will pop up on the marker     
+               var infowindow = new google.maps.InfoWindow({ 
+                   content: acctDetails
+               });
+               
+               // Place the marker on the map   
+               var marker = new google.maps.Marker({
+                   map: map,
+                   position: new google.maps.LatLng( 
+                                   acct.Location__Latitude__s, 
+                                   acct.Location__Longitude__s)
+               });
+               mapBoundary.extend(marker.getPosition());
+               
+               // Add the action to open up the panel when it's marker is clicked      
+               google.maps.event.addListener(marker, 'click', function(){
+                   infowindow.open(map, marker);
+               });
+           }
+        }
+        
+        // Fire the initialize function when the window loads
+        google.maps.event.addDomListener(window, 'load', initialize);
+        
+    </script>
+    
+    
+    <body style="font-family: Arial; border: 0 none;">
+       
+   <!--  All content is rendered by the Google Maps code -->
+    <!--  This minimal HTML justs provide a target for GMaps to write to -->
+        <div id="map-canvas"></div>
+    </body>
+</apex:page>

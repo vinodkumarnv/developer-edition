@@ -1,0 +1,8 @@
+<apex:page standardController="Case" showHeader="true">
+    <apex:logCallPublisher id="myLogCalllPublisher" 
+        entityId="{!case.id}"          
+        title="Log a Call"
+        width="500px"
+        autoCollapseBody="false"
+    />  
+</apex:page>

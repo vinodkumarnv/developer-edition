@@ -1,0 +1,8 @@
+<apex:page >
+
+
+        <p>Hi This is my page.</p>
+        Thank you<br/>...
+
+
+</apex:page>

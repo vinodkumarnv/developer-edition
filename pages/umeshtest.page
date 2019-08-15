@@ -1,0 +1,31 @@
+<apex:page standardStylesheets="false" id="pge" applyHtmlTag="false" showHeader="false" showChat="false" contentType="application/msword#Test.doc" cache="true" sidebar="false">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;" />
+
+</head>
+<c:dynapdfcomponent type="header" > 
+  <div>My header</div>
+</c:dynapdfcomponent>
+  <c:dynapdfcomponent type="footer">
+<div>Page <span class="pagenumber"/> of <span class="pagecount"/></div>
+
+</c:dynapdfcomponent>
+
+ <div class="content" >
+
+<!----------------Your content goes here--------->
+asghlk<br/> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>jhdgsjkahglkj
+aldkj<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>vggjk
+al;kfg<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>la;khg
+ajksd<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>vgkaljgh
+asdjfg<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>hkajdgh
+asldf<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>vhkajfgk
+
+
+</div>
+
+
+
+
+</apex:page>

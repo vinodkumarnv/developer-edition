@@ -1,0 +1,60 @@
+<apex:page standardController="Campaign" extensions="abc">
+<apex:form >
+<apex:pageBlock title="FormExample" >
+<apex:pageBlockButtons location="top" >
+<apex:commandButton value="Save" action="{!Save}"/>
+<apex:commandLink value="cancel" action="{!cancel}"/>
+</apex:pageBlockButtons>
+<table>
+<tr>
+<td><label>CampaignName:</label></td>
+<td><apex:inputField value="{!Campaign.Name}"/></td>
+</tr>
+<tr>
+<td><label>Active</label></td>
+<td><apex:inputCheckbox value="{!Campaign.IsActive}"/></td>
+
+</tr>
+<tr>
+<td><label>Status of Campaign</label></td>
+<td><apex:inputfield value="{!Campaign.Status}"/></td>
+
+</tr>
+
+<tr>
+<td><label>InputHidden:</label></td>
+<td><apex:inputHidden value="{!Campaign.id}"/></td>
+</tr>
+<tr>
+
+
+</tr>
+<tr>
+<td><label>Description:</label></td><td><center><apex:inputTextarea value="{!Campaign.Description}" cols="50"/></center></td>
+</tr>
+<tr>
+<td><label>Type:</label></td>
+<td><apex:selectList id="chooseColor" value="{!Campaign.Type}" size="1">
+<apex:selectOption itemValue="Conference" itemLabel="Conference"/>
+<apex:selectOption itemValue="Webinar" itemLabel="Webinar"/>
+<apex:selectOption itemValue="Trade Show" itemLabel="Trade Show"/>
+<apex:selectOption itemValue="Public Relations" itemLabel="Public Relations"/>
+<apex:selectOption itemValue="Partners" itemLabel="Partners"/>
+</apex:selectList>
+</td>
+</tr>
+
+<tr>
+<td><label>RadioButton:</label></td>
+<td><apex:selectRadio id="col" value="{!Campaign.Status}">
+<apex:selectoption itemLabel="Planned" itemValue="Planned"></apex:selectoption>
+<apex:selectoption itemLabel="In Progress" itemValue="In Progress"></apex:selectoption>
+<apex:selectoption itemLabel="Completed" itemValue="Completed"></apex:selectoption>
+<apex:selectoption itemLabel="Aborted" itemValue="Aborted"></apex:selectoption>
+</apex:selectRadio>
+</td>
+</tr>
+</table>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

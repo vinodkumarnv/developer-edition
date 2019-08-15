@@ -1,0 +1,21 @@
+<apex:page controller="VFCodeController">
+    <apex:form >
+    <apex:pageMessages />
+    <apex:pageBlock >
+ 
+        <apex:inputText value="{!vfName}"/>
+        <apex:commandLink value="Get VF Code" action="{!ShowVFCode}" />
+ 
+        <apex:outputPanel rendered="{!showCodeSection}">
+            <b>VF Code</b>:
+ <apex:outputLabel value="{!VFpageText}"/>
+            <hr/>
+            <b>HTML Code</b>:
+ <apex:outputLabel value="{!HTMLpageText}"/>
+        </apex:outputPanel>
+ 
+    </apex:pageBlock>
+</apex:form>
+
+
+</apex:page>

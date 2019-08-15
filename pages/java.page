@@ -1,0 +1,76 @@
+<apex:page standardController="Opportunity" docType="html-5.0" showHeader="false">
+   
+   <script>
+       function h()
+       {
+          percent1=0;
+          percent2=0;
+          org=1000;   
+          a=document.getElementById("one").value;
+          b=document.getElementById("two").value;
+          percent1=document.getElementById("p1").value;
+          percent2=document.getElementById("p2").value;
+       
+          if(percent1 != null && percent1 != 0)
+          {
+              temp=a*(percent1/100);
+              document.getElementById("one").value=temp; 
+          
+          }
+          if(percent2 != null && percent2 != 0)
+          {
+              temp1=b*(percent2/100);
+              document.getElementById("two").value=temp1; 
+          
+          } 
+       
+       }
+       function j()
+       {
+          percent1=0;
+          percent2=0;
+          org=1000;   
+          a=document.getElementById("one").value;
+          b=document.getElementById("two").value;
+          percent1=document.getElementById("p1").value;
+          percent2=document.getElementById("p2").value;
+         // alert(org);
+        //  alert(b+"Hi I am JavaScript"+a);
+        
+          sum=+a + +b;
+         // alert(sum);
+          if(sum <= org)
+          {
+             abc=(a/org)*100;
+             cba=(b/org)*100;
+             document.getElementById("p1").value=abc;
+             document.getElementById("p2").value=cba;
+          }
+          else
+          {
+              alert("Value exceeds the Amount: "+org);
+          }
+          
+                   
+    
+    
+       }
+   </script>
+   
+   
+    <apex:form id="theForm">
+        
+        <input type="number" value="" id="p1" onclick="j();"/><!--onclick="j();"-->
+        <input type="number" value="1000" name="ab" id="one" onclick="h();"/><br/><!--onclick="j();-->
+         <input type="number" value="" id="p2" onclick="j();"/><!--onclick="j();"-->
+        <input type="text" value="" id="two" /><br/><!--onclick="j();"-->
+        <input type="button" value="Validate1" onclick="j();" />
+        <input type="button" value="Validate2" onclick="h();" />
+        
+        
+        
+     
+        
+        
+    </apex:form>
+</apex:page>

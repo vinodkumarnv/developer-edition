@@ -1,0 +1,15 @@
+<apex:page showHeader="false">
+
+  <apex:composition template="myhome" />
+  <apex:define name="header" />
+  
+  <p>
+  Hi this is my first VisualForce page,
+  that uses the template for adding Header and Footer.
+ 
+  Thank you for visiting the page.
+  </p>
+   
+  <apex:define name="footer"></apex:define>
+  
+</apex:page>

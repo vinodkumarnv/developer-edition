@@ -1,0 +1,5 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  {!$User.FirstName}
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

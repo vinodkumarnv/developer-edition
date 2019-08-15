@@ -1,0 +1,7 @@
+<apex:page standardController="Contact">
+  <!-- Begin Default Content REMOVE THIS -->
+  {!contact.firstname}
+  {!contact.lastname}
+  {!contact.Owner.Email}
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

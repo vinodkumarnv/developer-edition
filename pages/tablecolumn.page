@@ -1,0 +1,48 @@
+<apex:page docType="html-5.0" renderAs="pdf">
+<head>
+<style>
+
+table{
+    table-layout:fixed;
+    
+}
+table td {
+    width:20%;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<table width="600" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>hdng 1</td>
+        <td>hdng 2</td>
+        <td>hdng 3</td>
+        <td>hdng 4</td>
+        <td>hdng 5</td>
+    </tr>
+</table>
+<table width="600" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>hdng 1</td>
+        <td>hdng 2</td>
+        <td>hdng 3</td>
+        <td>hdng 4</td>
+        <td>hdng 5</td>
+    </tr>
+</table>
+<table width="600" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <td style="width:80%;">content content content 7777777777777777777777777777777777777777777777777</td>
+        
+        
+        <td >content content content</td>
+    </tr>
+</table>
+</body>
+</apex:page>

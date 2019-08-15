@@ -1,0 +1,24 @@
+<apex:page >
+ <!--<style>
+ .para
+ {
+     color:blue;
+ }
+ </style>-->
+ 
+  
+ <script type="text/JavaScript">
+     Function func()
+     {
+         alert("Hi I am JavaScript");
+     }
+ </script>
+ 
+ <apex:stylesheet value="{!$Resource.MycoreCSS}"/>
+ <p class="para">Hi this is My Visualforce Classes</p>
+ <apex:form >
+ <apex:commandlink Value="Click" onclick="func()"/>
+ </apex:form>
+
+ 
+</apex:page>

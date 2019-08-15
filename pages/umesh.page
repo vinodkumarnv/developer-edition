@@ -1,0 +1,107 @@
+<apex:page sidebar="false"
+           showChat="false"
+           showHeader="false"
+           contentType="application/msword#Test.doc"
+           cache="true"
+           standardStylesheets="false">
+           <!-- contentType="application/msword#Test.doc" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;" />
+<style>
+    @page Main {
+        mso-header:h1;
+        mso-footer:f1;
+    }
+    div.Main{
+        page:Main;
+    }
+    p.MyFoot, li.MyFoot, div.MyFoot{
+        mso-pagination:widow-orphan;
+        tab-stops:center 216.0pt right 432.0pt;
+    }
+    p.MyHead {
+
+    }
+</style>
+</head>
+
+<div class="Main">
+    <div style="mso-element:header" id="h1">
+    <div style="width:70px;font-size:13px;height:34px;background-color: Blue;position: absolute;left: 10px;top:10px;">
+        <p class="MyHead">Header Text</p>
+        </div>
+    </div>
+    
+  
+    <div style="mso-element:footer" id="f1">
+        <p class="MyFoot">
+            <span style='mso-field-code:" FILENAME "'> </span>
+            <span style='mso-tab-count:2'></span>
+            Page <span style='mso-field-code: PAGE '></span> of In this lesson,
+            you will learn about a method of establishing a new country or government through what
+             is known as force theory. When you are through with the lesson, test your new knowledge with a quiz.
+How to Define Force TheoryWhile the two theories mentioned above are generally how states and countries
+take shape, they often unfold in different ways and can be identified by the presence of certain elements.
+
+One important element of force theory is occupation by a foreign military or government.
+For example, when the German Army invaded France in 1940, they took control of the
+ people and government through military occupation. This occupation was done with the intention of bringing
+France under Nazi governmental rule, but was overthrown by Allied forces in 1944.While the two theories
+mentioned above are generally how states and countries take shape, they often unfold in different ways
+and can be identified by the presence of certain elements.
+<br/><br/><br/>
+One important element of force theory is occupation by a foreign military or government. For example,
+when the German Army invaded France in 1940, they took control of the people and government through
+military occupation. This occupation was done with the intention of bringing France under Nazi governmental rule,
+but was overthrown by Allied forces in 1944.While the two theories mentioned above are generally
+how states and countries take shape, they often unfold in different ways and can be identified by
+the presence of certain elements.
+<br/><br/><br/>
+Page  of In this lesson, you will learn about a method of establishing a new country or government through what is known as force theory. When you are through with the lesson, test your new knowledge with a quiz. How to Define Force TheoryWhile the two theories mentioned above are generally how states and countries take shape, they often unfold in different ways and can be identified by the presence of certain elements. One important element of force theory is occupation by a foreign military or government. For example, when the German Army invaded France in 1940, they took control of the people and government through military occupation. This occupation was done with the intention of bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.While the two theories mentioned above are generally how states and countries take shape, they often unfold in different ways and can be identified by the presence of certain elements.
+
+
+One important element of force theory is occupation by a foreign military or government. For example, when the German Army invaded France in 1940, they took control of the people and government through military occupation. This occupation was done with the intention of bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.While the two theories mentioned above are generally how states and countries take shape, they often unfold in different ways and can be identified by the presence of certain elements.
+
+
+One important element of force theory is occupation by a foreign military or government. For example, when the German Army invaded France in 1940, they took control of the people and government through military occupation. This occupation was done with the intention of bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944. While the two theories mentioned above are generally how states and countries take shape,
+
+
+they often unfold in different ways and can be identified by the presence of certain elements.
+
+One important element of force theory is occupation by a foreign military or government.
+ For example, when the German Army invaded France in 1940, they took control of the people
+ and government through military occupation. This occupation was done with the intention of
+  bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.
+  While the two theories mentioned above are generally how states and countries take shape,
+  <br/><br/><br/>
+  they often unfold in different ways and can be identified by the presence of certain elements.
+<br/><br/><br/>
+One important element of force theory is occupation by a foreign military or government.
+ For example, when the German Army invaded France in 1940, they took control of the people
+ and government through military occupation. This occupation was done with the intention of
+ bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.While
+ the two theories mentioned above are generally how states and countries take shape, they often
+ unfold in different ways and can be identified by the presence of certain elements.
+<br/><br/><br/>
+One important element of force theory is occupation by a foreign military or government.
+ For example, when the German Army invaded France in 1940, they took control of the people
+ and government through military occupation. This occupation was done with the intention of
+ bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.While
+ the two theories mentioned above are generally how states and countries take shape, they often unfold in different ways and can be identified by the presence of certain elements.
+<br/><br/><br/>
+One important element of force theory is occupation by a foreign military or government.
+For example, when the German Army invaded France in 1940, they took control of the people
+and government through military occupation. This occupation was done with the intention of bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.While the two theories mentioned above are generally how states and countries take shape, they often unfold in different ways and can be identified by the presence of certain elements.
+
+One important element of force theory is occupation by a foreign military or government. For example, when the German Army invaded France in 1940, they took control of the people and government through military occupation. This occupation was done with the intention of bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.While the two theories mentioned above are generally how states and countries take shape, they often unfold in different ways and can be identified by the presence of certain elements.
+<br/><br/><br/>
+One important element of force theory is occupation by a foreign military or government. For example, when the German Army invaded France in 1940, they took control of the people and government through military occupation. This occupation was done with the intention of bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.While the two theories mentioned above are generally how states and countries take shape, they often unfold in different ways and can be identified by the presence of certain elements.
+<br/><br/><br/>
+One important element of force theory is occupation by a foreign military or government. For example, when the German Army invaded France in 1940, they took control of the people and government through military occupation. This occupation was done with the intention of bringing France under Nazi governmental rule, but was overthrown by Allied forces in 1944.
+Think about where you live -- the country, the state, the <span style='mso-field-code:" NUMPAGES "'></span>
+        </p>
+    </div>
+</div>
+
+</apex:page>

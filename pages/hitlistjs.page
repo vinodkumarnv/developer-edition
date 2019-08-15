@@ -1,0 +1,12 @@
+<apex:page >
+    <!--<script>
+        function test()
+        {
+            alert("Hi i am JavaScript");
+        }
+    </script>-->
+    <apex:includeScript value="{!$Resource.hitlistjs}"/>
+    <form>    
+        <input type="button" value="Call Js" onclick="test()"/>
+    </form>
+</apex:page>

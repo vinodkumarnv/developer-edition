@@ -1,0 +1,20 @@
+<apex:page >
+<!--<style>
+    #mypara
+    {
+        color:orange;
+        font-size:14px;
+        background-color:black;
+    }
+    h1
+    {
+        color:green;
+    }
+</style>-->
+
+<apex:stylesheet value="{!$Resource.hitlistcss}"/>
+
+  <h1 style="color:blue">Congratulations</h1>
+  <p id="mypara">This is your new Page: hitlist</p>
+  
+</apex:page>

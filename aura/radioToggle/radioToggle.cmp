@@ -1,0 +1,17 @@
+<aura:component controller="QuestionAnswerClass" access="global" >
+    <aura:attribute name="Questions" type="List"/>
+    <aura:attribute name="radioGrpValue" type="List"/> 
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:iteration items="{!v.Questions}" var="ques" indexVar="outindex">
+       
+
+        <aura:iteration items="{!v.ques.Answers__r}" var="option">
+            <lightning:input type="radio" name="{!ques.QuestionText__c}" value="{!option.value}" label="{!option.label}"></lightning:input>
+
+        </aura:iteration>
+                            
+    </aura:iteration> 
+    
+</aura:component>

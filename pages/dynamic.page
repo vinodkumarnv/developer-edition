@@ -1,0 +1,62 @@
+<apex:page controller="Dynamicseacrch">
+<apex:form >
+<apex:actionFunction name="test" action="{!processSelected}" reRender="ttf"/>
+<script type="text/javascript">
+
+
+
+
+        function selectAllCheckboxes(obj,receivedInputID){
+            var inputCheckBox = document.getElementsByTagName("input");
+            for(var i=0; i<inputCheckBox.length; i++){
+                if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){
+                    inputCheckBox[i].checked = obj.checked;
+                    test();
+                }
+            }
+        }
+    </script>
+
+  <apex:outputpanel >
+  <apex:selectList size="1" value="{!name}">  
+  <apex:selectOptions value="{!count}" />   
+  <apex:actionSupport event="onchange"  reRender="tt"/>
+  </apex:selectList>
+ 
+ </apex:outputpanel>
+<apex:pageBlock id="tt">
+  <apex:pageblockTable value="{!wrapperObj}" var="Rec">
+ 
+               
+                          
+                            
+               
+  
+  
+         <apex:column >
+         <apex:facet name="header">
+         <apex:inputCheckbox onclick="selectAllCheckboxes(this,'inputId')"/>  
+         </apex:facet>
+                    
+            <apex:inputcheckbox value="{!Rec.checkBox}" id="inputId" >
+            <apex:actionSupport action="{!processSelected}" event="onclick" reRender="ttf" /></apex:inputcheckbox>
+            
+         </apex:column>
+         <apex:column value="{!Rec.accObj.name}"/>
+         <apex:column value="{!Rec.accObj.id}"/>
+         <apex:column value="{!Rec.accObj.Country__c}"/>
+         
+ </apex:pageblockTable>
+
+ <apex:pageBlock >
+ <apex:pageBlockTable value="{!selected}" var="t" id="ttf">
+ <apex:column value="{!t.Name}"/>
+  <apex:column value="{!t.Country__c}"/>
+ 
+ </apex:pageBlockTable>
+ 
+ </apex:pageBlock>
+
+</apex:pageBlock>
+  </apex:form> 
+</apex:page>

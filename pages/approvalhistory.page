@@ -1,0 +1,13 @@
+<apex:page standardcontroller="case" standardStylesheets="false" >
+<div style="background-color:#F8F8F8"><apex:relatedList list="ProcessSteps" ></apex:relatedList></div>
+    <apex:form >
+            <apex:pageBlock id="thePageBlock">
+                <apex:pageBlockTable value="{!case.Histories}" var="h">
+                <apex:column headerValue="Date"  value="{!h.createddate}"/>
+                <apex:column headerValue="What" value="{!h.field}"/>
+                <apex:column headerValue="From" value="{!h.oldvalue}"/>
+                <apex:column headerValue="To"   value="{!h.newvalue}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

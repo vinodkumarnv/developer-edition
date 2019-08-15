@@ -1,0 +1,76 @@
+<apex:page sidebar="true" showHeader="true" Controller="custcontroller" >
+<head>
+<style>
+.myvid
+{
+position: absolute;
+left: 550px;
+top: 10px;
+}
+.tablenam
+{
+position: absolute;
+width: 82%;
+top: 0px;
+}
+<!--#savebutton
+{
+  left: 614px;
+  position: absolute;
+  top: 245px;
+}-->
+
+</style>
+</head>    
+   
+    <apex:image value="{!$Resource.sevenlogo}" style="border: 0;width: 100px;height: 90px;" />
+   <video class="myvid" width="320" height="240">
+      <source src="{!$Resource.video}" type="video/mp4" />
+                  <!--<source src="movie.ogg" type="video/ogg">-->
+    </video>
+
+    <p><br></br></p>
+    <p><br></br></p>
+    <p><br></br></p>
+    <p><br></br></p>
+    <p><br></br></p>
+    <apex:form >
+    <apex:pageBlock id="tablenam" title="My Contact List">
+           <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!save}" id="savebutton"/>        
+           </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!contacts}" var="contact" >
+            <apex:column headerValue="Name" >
+            
+            <apex:inputText value="{!contact.Name}"/></apex:column>
+            <!--<apex:inputText value="{!contact.Name}" id="username" />-->
+            
+            <apex:column headerValue="Title" >
+            <apex:inputText value="{!contact.title}"/></apex:column>
+            
+             
+             <apex:column headerValue="Phone" >
+            <apex:inputText value="{!contact.phone}"/></apex:column>
+            
+            <apex:column headerValue="Email" >
+            <apex:inputText value="{!contact.email}"/></apex:column>
+            
+             <apex:column headerValue="Lead Source" >
+            <apex:inputField value="{!contact.leadsource}"/></apex:column>
+            
+                                 
+            <apex:column headerValue="Delete Action">
+            <apex:commandlink value="delete" action="{!test}" >
+            <apex:param value="{!contact.id}" assignTo="{!cont}" name="assignvalue"/></apex:commandlink>
+            </apex:column>                
+         
+           <!-- <apex:column value="{!contact.email}"/>
+            <apex:column value="{!contact.id}"/>-->
+          
+        </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+    </apex:form>
+ 
+ 
+</apex:page>

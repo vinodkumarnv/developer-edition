@@ -1,0 +1,15 @@
+<apex:page showHeader="false">
+<apex:stylesheet value="{!$Resource.mycss}"/>
+  <!-- Begin Default Content REMOVE THIS -->
+ <apex:insert name="header">
+  <header>
+     <h2 style="left: 89%;position: absolute;top:16px;">Welcome to seven</h2>
+  </header>
+ </apex:insert>
+  <div style="width: 50px;top: 3px;position: absolute;"><div id="im"><apex:image value="{!$Resource.sevenlogo}" />
+  </div></div>
+  <apex:insert name="footer">
+      <footer><div style="position: absolute;left: 617px;bottom: 17px;"><b>All Rights Reserved.</b></div></footer>
+  </apex:insert>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

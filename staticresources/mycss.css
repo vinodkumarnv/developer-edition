@@ -1,0 +1,30 @@
+header
+  {
+      width:100%;
+      height:50px;
+      background-color: #BFC2C1;
+  }
+  img
+  {
+   border: 0px none;
+   width: 50px;
+   top: 3px;
+   position: absolute;   
+  }
+  #para
+  {
+      text-align:center;
+      left:500px;
+  }
+  ol
+  {
+      text-align:justify;
+  }
+  footer
+  {
+      width: 100%;
+      height: 53px;
+      top: 92%;
+      background-color: #BFC2C1;
+      position: absolute;
+  }

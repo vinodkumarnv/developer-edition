@@ -1,0 +1,11 @@
+<apex:page standardController="Account">
+
+
+<p>Hi This is My First Page.</p>
+<apex:pageBlock >
+
+</apex:pageBlock>
+<apex:detail />
+
+
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page controller="regioncontroller">
+<apex:form >
+<apex:pageblock >
+   <apex:pageMessages id="messages1"/>    
+   <apex:pageBlockSection columns="2" title="WITH Action Region">
+      <apex:outputText value="Name" />
+     <apex:actionRegion >
+         <apex:inputText value="{!name}">
+            <apex:actionSupport event="onkeyup" reRender="outname,messages1" />
+         </apex:inputText>
+     </apex:actionRegion>
+      <apex:outputText value="Job" />
+      <apex:inputText required="true" id="job23"  value="{!job}" />
+   </apex:pageBlockSection>
+   <apex:outputText id="outname" style="font-weight:bold" value="Typed Name: {!name}" />
+   </apex:pageblock>
+</apex:form>
+</apex:page>

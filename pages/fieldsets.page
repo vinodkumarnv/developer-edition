@@ -1,0 +1,26 @@
+<apex:page standardController="Contact">
+    <apex:form >
+    <apex:pageBlock title="Fields in Proper Names">
+        <apex:pageBlockButtons >
+            <!--<apex:commandButton value="New" action="{!save}"/>-->
+                
+                <select name="yes">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+              
+                
+            
+        </apex:pageBlockButtons>
+        
+        <apex:repeat value="{!$ObjectType.Contact.FieldSets.one}" var="s">
+            
+                <apex:facet name="header">{!s}</apex:facet>
+            
+         </apex:repeat>
+         
+            
+      
+    </apex:pageBlock> 
+    </apex:form>
+</apex:page>

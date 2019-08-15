@@ -1,0 +1,13 @@
+<apex:page controller="removerowfrompageblocktable" >
+<apex:form >
+  <apex:pageBlock >
+ 
+      <apex:pageBlockTable id="dttable" value="{!con}" var="c">
+      <Apex:column ><apex:facet name="header">Action</apex:facet><apex:commandLink action="{!removecon}" reRender="dttable" ><apex:param assignTo="{!conid}" value="{!c.id}" name="assignvalue" /> Remove Row</apex:commandLink> </Apex:column>
+        <Apex:column ><apex:facet name="header">Name</apex:facet>{!c.name}</Apex:column>
+      <Apex:column ><apex:facet name="header">Email</apex:facet>{!c.Email}</Apex:column>
+      </apex:pageBlockTable>
+ 
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page >
+
+<apex:includeScript value="{!$Resource.jsstest}"/>
+<!--  <script>
+      function test()
+      {
+          alert("Hi This is from Document");
+      }
+  </script>-->
+ 
+  <h1>Congratulations</h1>
+  This is your new Page: javatest
+  
+  <input type="button" value="Call JavaScript" onclick="test();"/>
+  
+</apex:page>

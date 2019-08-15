@@ -1,0 +1,42 @@
+<apex:page showHeader="false">
+<apex:stylesheet value="{!$Resource.mycss}"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <!-- Begin Default Content REMOVE THIS -->
+ 
+  <header>
+     <h2 style="left: 89%;position: absolute;top:16px;">Welcome to seven</h2>
+  </header>
+  <div style="width: 50px;top: 3px;position: absolute;"><div id="im"><apex:image value="{!$Resource.sevenlogo}" />
+  </div></div>
+  <div id="para">
+  <br></br>
+  <p style="text-align='center';left:500px;">  
+   <ol> Seven, the fourth prime number, is not only a Mersenne prime (since 23 − 1 = 7) but also a double Mersenne prime<br></br> 
+    since the exponent, 3, is itself a Mersenne prime. It is also a Newman–Shanks–Williams prime, a Woodall prime,<br></br>
+     a factorial prime, a lucky prime, a happy number (happy prime), <br></br>
+     a safe prime (the only Mersenne safe prime) and the fourth Heegner number.</ol><br></br>
+   <ol> Seven is the lowest natural number that cannot be represented as the sum of the squares of three integers. <br></br>
+    (See Lagrange's four-square theorem#Historical development.)</ol><br></br>
+    <ol>Seven is the aliquot sum of one number, the cubic number 8 and is the base of the 7-aliquot tree.<br></br>
+    n = 7 is the first natural number for which the next statement does not hold:<br></br>
+     "Two nilpotent endomorphisms from Cn with the same minimal polynomial and the same rank are similar."</ol><br></br>
+    <ol>7 is the only number D for which the equation 2n-D=x2 has more than two solutions for n and x natural. <br></br>
+    In particular, the equation 2n-7=x2 is known as the Ramanujan–Nagell equation.</ol><br></br>
+    <ol>7 is the only dimension, besides the familiar 3, in which a vector cross product can be defined.</ol><br></br>
+    <ol>7 is the lowest dimension of a known exotic sphere, although there may exist as yet unknown exotic smooth <br></br>
+    structures on the 4-dimensional sphere.<br></br>
+    999,999 divided by 7 is exactly 142,857. Therefore,<br></br>
+     when a vulgar fraction with 7 in the denominator is converted to a decimal expansion, <br></br>
+     the result has the same six-digit repeating sequence after the decimal point,<br></br>
+      but the sequence can start with any of those six digits. <br></br>
+       For example, 1/7 = 0.142 857 142.... and 2/7 = 0.285 714 285...<br></br>
+    </ol>
+
+  </p>
+  </div>
+  <footer><div style="position: absolute;left: 617px;bottom: 17px;"><b>All Rights Reserved.</b></div></footer>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

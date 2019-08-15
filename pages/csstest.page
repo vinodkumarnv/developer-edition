@@ -1,0 +1,21 @@
+<apex:page >
+
+  <apex:stylesheet value="{!$Resource.csstest}"/>  
+ 
+  <h1 class="ht hk" >Congratulations</h1>
+  <h2 class="ht">, Welcome</h2>
+  <p>This is your new Page: csstest</p>
+  
+  <!--<style>
+        .ht
+        {
+            color : Blue;
+        }
+        p
+        {
+            background-color: grey;
+        }
+    
+    </style>
+ -->
+</apex:page>

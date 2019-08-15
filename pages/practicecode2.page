@@ -1,0 +1,32 @@
+<!--
+    sample code to demonstrate save using standardcontroller
+
+-->
+
+<apex:page standardcontroller="Account">
+<head>
+<style>
+.btn
+{
+position: absolute;
+left: 613px;
+top: 171px;
+}
+</style>
+</head>
+      <apex:form >
+          <apex:pageBlock title="Edit Account for {!$User.FirstName} {!$User.LastName}">
+             
+              <apex:pageMessages />
+              <apex:pageBlockButtons >
+                  <apex:commandButton value="Save" Action="{!save}"/>                  
+              </apex:pageBlockButtons>
+              <apex:pageBlockSection >
+                  <apex:inputField value="{!account.name}"/><br></br>
+                  <apex:inputField value="{!account.AccountNumber}"/><br></br>
+                  <apex:inputField value="{!account.Phone}"/>    
+              </apex:pageBlockSection>
+              
+          </apex:pageBlock>
+     </apex:form>
+  </apex:page>
