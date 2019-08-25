@@ -1,11 +1,8 @@
 <!--Wired and track api for apex call-->
 <template>
-    {wiredToFuncData}
-    <p class="slds-m-bottom_small">
+    <lightning-card title={wiredToFuncData}>
         <lightning-button label="Load String" onclick={handleLoad}></lightning-button>
-        {funcData}
-    </p>
-    <p>
-        {wiredToPropData.data}
-    </p>
+        <p class="slds-p-horizontal_small">Card Body After click of button--> <b>{funcData}</b></p>
+        <p slot="footer">{wiredToPropData.data}</p>
+    </lightning-card>
 </template>
