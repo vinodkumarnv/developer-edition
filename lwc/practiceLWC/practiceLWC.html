@@ -2,7 +2,7 @@
 <template>
     <lightning-card title={wiredToFuncData}>
         <lightning-button label="Load String" onclick={handleLoad}></lightning-button>
-        <p class="slds-p-horizontal_small">Card Body After click of button--> <b>{funcData}</b></p>
-        <p slot="footer">{wiredToPropData.data}</p>
+        <div class="slds-p-horizontal_small">Card Body After click of button--> <b>{funcData}</b></div>
+        <p slot="footer">{wiredToPropData.data} {error}</p>
     </lightning-card>
 </template>

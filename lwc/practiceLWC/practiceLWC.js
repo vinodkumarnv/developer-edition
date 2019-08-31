@@ -1,5 +1,6 @@
 import { LightningElement, track, wire } from "lwc";
 import getString from "@salesforce/apex/ParentTestController.getString";
+import getStringByParam from "@salesforce/apex/ParentTestController.getStringByParam";
 
 export default class PracticeLWC extends LightningElement {
   @track error;
@@ -8,7 +9,7 @@ export default class PracticeLWC extends LightningElement {
   @track wiredToPropData;
 
   handleLoad() {
-    getString()
+    getStringByParam({ a: "parameter" })
       .then(result => {
         this.funcData = result;
       })
@@ -26,5 +27,5 @@ export default class PracticeLWC extends LightningElement {
     }
   }
 
-  @wire(getString) wiredToPropData;
+  @wire(getStringByParam) wiredToPropData;
 }
