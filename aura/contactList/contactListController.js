@@ -1,11 +1,9 @@
 ({
-	doInit : function(component, event, helper) 
-	{
+	doInit : function(component, event, helper) {
 		// Retrieve contacts during component initialization
 		helper.loadContacts(component);
 	},
-	handleSelect : function(component, event, helper) 
-	{
+	handleSelect : function(component, event, helper) {
 		var contacts = component.get("v.contacts");
 		var contactList = component.get("v.contactList");
 		//Get the selected option: "Referral", "Social Media", or "All"
@@ -14,19 +12,15 @@
 		//test
 		var k = 0;
 		//filter
-		for (var i=0; i<contactList.length; i++)
-		{
+		for (var i=0; i<contactList.length; i++){
 			var c = contactList[i];
-			if (selected != "All")
-			{
-				if(c.LeadSource == selected) 
-				{
+			if (selected != "All"){
+				if(c.LeadSource == selected) {
 					filter[k] = c;
 					k++;
 				}
 			}
-			else 
-			{
+			else {
 				filter = contactList;
 			}
 		}
