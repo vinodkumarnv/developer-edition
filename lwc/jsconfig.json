@@ -1,6 +1,23 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/helloWorld": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/practiceLWC": [
+                "practiceLWC/practiceLWC.js"
+            ]
+        },
+        "experimentalDecorators": true
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
     }
 }
