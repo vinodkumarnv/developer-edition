@@ -1,4 +1,5 @@
-<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable" access="global" controller="ParentTestController">
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable" access="global"
+	controller="ParentTestController">
 
 	<aura:attribute name="line" type="String" />
 	<aura:attribute name="title" type="String" default="Seven" />
